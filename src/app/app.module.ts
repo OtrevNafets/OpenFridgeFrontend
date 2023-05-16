@@ -23,6 +23,7 @@ import { MatSliderModule} from '@angular/material/slider';
 import { ChipsComponent } from './shared_module/chips/chips.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list'
+import { DialogAddComponent } from './shared_module/dialogs/add-dialog/dialog.add.component';
 
 const myRoutes: Routes = [
   {path: 'ingridients', component: SearchIngridientComponent},
@@ -40,7 +41,8 @@ const myRoutes: Routes = [
     SearchRecipeComponent,
     EvaluationComponent,
     SliderComponent,
-    ChipsComponent
+    ChipsComponent,
+    DialogAddComponent
   ],
   imports: [
     RouterModule.forRoot(myRoutes),

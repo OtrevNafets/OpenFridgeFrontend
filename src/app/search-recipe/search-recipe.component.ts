@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogBodyComponent } from '../dialog-body/dialog-body.component';
 import { Ingridient } from '../interfaces/ingridients';
+import { DialogAddComponent } from '../shared_module/dialogs/add-dialog/dialog.add.component';
 
 @Component({
   selector: 'app-search-recipe',
@@ -27,7 +28,8 @@ export class SearchRecipeComponent {
   }
 
   openDialog(){
-    this.matDialog.open(DialogBodyComponent,{width: '350px',})
+    let dialogRef = this.matDialog.open(DialogAddComponent,{width: '350px',})
+    dialogRef.componentInstance.itemName = 'Ingridient'
   }
 
   removeIngridientFromList(name: string){
