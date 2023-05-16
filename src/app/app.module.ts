@@ -21,7 +21,8 @@ import { EvaluationComponent } from './evaluation/evaluation.component';
 import { SliderComponent } from './slider/slider.component';
 import { MatSliderModule} from '@angular/material/slider';
 import { ChipsComponent } from './shared_module/chips/chips.component';
-import {MatChipsModule} from '@angular/material/chips'
+import {MatChipsModule} from '@angular/material/chips';
+import { MatListModule } from '@angular/material/list'
 
 const myRoutes: Routes = [
   {path: 'ingridients', component: SearchIngridientComponent},
@@ -55,13 +56,14 @@ const myRoutes: Routes = [
     MatButtonModule,
     MatSelectModule,
     MatSliderModule,
-    MatChipsModule
+    MatChipsModule,
+    MatListModule
   ],
 
   exports: [
-    SliderComponent
+    SliderComponent,
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })

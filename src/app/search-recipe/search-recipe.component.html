@@ -1,1 +1,30 @@
-<p>search-recipe works!</p>
+<h2>Add a new recipe</h2>
+
+<div class="form-group" >
+  <label style="margin-bottom: 10px">Ingridient:</label>
+  <input placeholder="Name" class="form-control">
+
+  <div>
+    <input placeholder="Ingridient" class="form-control">
+    <button mat-raised-button color="primary" style="margin-top: 5px;" (click)="openDialog()">Add</button>
+    <ul>
+      <li *ngFor="let ingridient of ingridientsForRecipe">
+        {{ingridient.ingridientName}}
+        <button mat-raised-button color="primary" (click)="removeIngridientFromList(ingridient.ingridientName)">X</button>
+      </li>
+    </ul>
+
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>RecipeType</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let type of recipeTypes" [value]="type">
+        {{type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <input placeholder="Author" class="form-control">
+  <textarea placeholder="Description" class="form-control"></textarea>
+</div>
